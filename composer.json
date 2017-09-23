@@ -1,0 +1,20 @@
+{
+    "name": "dmitryi/parser",
+    "description": "parser_synonyms",
+    "type": "new project",
+    "license": "Apache-2.0",
+    "require": {
+        "sunra/php-simple-html-dom-parser": "^1.5"
+    },
+    "authors": [
+        {
+            "name": "Dmitriy Nikolaenko",
+            "email": "Dnikolaenko2908@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": ["app/"]
+        }
+    }
+}

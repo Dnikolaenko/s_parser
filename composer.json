@@ -4,7 +4,8 @@
     "type": "new project",
     "license": "Apache-2.0",
     "require": {
-        "sunra/php-simple-html-dom-parser": "^1.5"
+        "sunra/php-simple-html-dom-parser": "^1.5",
+        "jenssegers/mongodb": "^3.2"
     },
     "authors": [
         {

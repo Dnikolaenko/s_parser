@@ -4,9 +4,11 @@ namespace App;
 
 class Config {
 
-  public static $synonyms = 'https://raw.githubusercontent.com/dwyl/english-words/master/words.txt';
+  protected static $_instance;
 
-  public static $parsing = 'http://www.wordreference.com/synonyms/';
+  public static $synonyms_url = 'https://raw.githubusercontent.com/dwyl/english-words/master/words.txt';
+
+  public static $parsing_url = 'http://www.wordreference.com/synonyms/';
 
   public static $path_to_download = __DIR__  . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "download_files" . DIRECTORY_SEPARATOR;
 
@@ -15,6 +17,24 @@ class Config {
   public static $db_name = "parsing";
 
   public static $db_collection = "synonyms";
+
+
+  private function __construct() {
+  }
+
+  public static function getInstance() {
+        if (self::$_instance === null) {
+            self::$_instance = new self;
+        }
+
+        return self::$_instance;
+    }
+
+  private function __clone() {
+  }
+
+  private function __wakeup() {
+  }
 
   /**
   * Download page and return formated result

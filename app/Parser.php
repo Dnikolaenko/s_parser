@@ -8,28 +8,10 @@ use App\Database;
 
 class Parser {
 
-	// private $synonyms_url;
-	//
-	// private $parsing_url;
-	//
-	// private $download_path;
-	//
-	// private $base_name;
-	//
-	// private $base_collection;
-	//
-	// private $term;
-
 	private $db;
 
 	public function __construct() {
 		Config::getInstance();
-		// $this->synonyms_url = $config::$synonyms;
-		// $this->parsing_url = $config::$parsing;
-		// $this->download_path = $config::$path_to_download;
-		// $this->base_name = $config::$db_name;
-		// $this->base_collection = $config::$db_collection;
-		// $this->term = $config::$search_tag;
 	}
 
 	/**
